@@ -50,6 +50,7 @@ def render_report(
     show_memory_leaks: bool,
     merge_threads: bool,
     inverted: bool,
+    use_local: bool = False
 ) -> str:
     env = get_render_environment()
     template = env.get_template(kind + ".html")
@@ -69,4 +70,5 @@ def render_report(
         show_memory_leaks=show_memory_leaks,
         merge_threads=merge_threads,
         inverted=inverted,
+        use_local=use_local,
     )

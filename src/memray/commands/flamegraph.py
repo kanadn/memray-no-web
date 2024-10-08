@@ -40,5 +40,7 @@ class FlamegraphCommand(HighWatermarkCommand):
         parser.add_argument(
             "--use-local-js",
             action="store_true",
+            dest="use_local",
+            default=False,
             help="Use locally bundled JavaScript libraries instead of CDN links",
         )
