@@ -9,7 +9,7 @@
 
   {%- block styles -%}
   {% if use_local %}
-  <link rel="stylesheet" href="/src/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
   {% else %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
   {% endif %}
@@ -142,11 +142,11 @@
 
   {% block scripts %}
   {% if use_local %}
-  <script src="/src/vendor/popper.js/dist/umd/popper.min.js"></script>
-  <script src="/src/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="/src/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/src/vendor/lodash/lodash.min.js"></script>
-  <script src="/src/vendor/plotly.js/dist/plotly.min.js"></script>
+  <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/node_modules/lodash/lodash.min.js"></script>
+  <script src="/node_modules/plotly.js/dist/plotly.min.js"></script>
   {% else %}
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
