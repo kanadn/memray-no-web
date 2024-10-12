@@ -14,7 +14,7 @@
       "<rootDir>/node_modules/"
     ]
   },
-  "dependencies": {
+  "optionalDependencies": {
     "bootstrap": "4.6.0",
     "d3": "4.13.0",
     "d3-flame-graph": "4.0.6",

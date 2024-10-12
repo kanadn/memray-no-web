@@ -84,7 +84,10 @@ class BuildMemray(build_ext_orig):
         if any(ASSETS_LOCATION.glob("*.js")):
             return
 
-        self.announce_and_run(["npm", "install"])
+        if os.getenv("USE_LOCAL_JS", "false") == "true":
+            self.announce_and_run(["npm", "install", "--include=optional"])
+        else:
+            self.announce_and_run(["npm", "install", "--no-optional"])
         self.announce_and_run(["npm", "run-script", "build"])
 
 
