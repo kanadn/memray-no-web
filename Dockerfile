@@ -37,7 +37,10 @@ RUN python3 -m venv "$VIRTUAL_ENV"
 
 ENV PATH="${VIRTUAL_ENV}/bin:/usr/lib/ccache:${PATH}" \
     PYTHON="${VIRTUAL_ENV}/bin/python" \
-    MEMRAY_MINIMIZE_INLINING="1"
+    MEMRAY_MINIMIZE_INLINING="1" \
+    USE_LOCAL_JS="true"
+
+    # TODO: Remove USE_LOCAL_JS before release
 
 COPY requirements-test.txt requirements-extra.txt requirements-docs.txt /tmp/
 
